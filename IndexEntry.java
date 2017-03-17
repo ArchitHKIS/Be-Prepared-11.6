@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class IndexEntry {
+public class IndexEntry{
 	private static String word;
 	private static ArrayList<Integer> numList;
 
@@ -10,10 +10,9 @@ public class IndexEntry {
 	}
 	
 	public static void add(int num) {
-		Integer num1 = num;
-        if (!numList.contains( num1 ) )
+        if (!numList.contains(num))
         {
-            numList.add( num1 );
+            numList.add(num);
         }
 	}
 
@@ -22,13 +21,10 @@ public class IndexEntry {
 	}
 
 	public String toString() {
-	/*	String index = word + " " + numList.toString(); // makes a string with word followed by numlist as a string
-		index.replace("[", ""); // removes the square brackets
-		return index; // return statement*/
 		String result = word;
         for ( Integer num : numList )
         {
-            result += ( " " + num + ",");
+            result += (" " + num +",");
         }
         result = result.substring( 0 , result.length() - 1 );
         return result;
